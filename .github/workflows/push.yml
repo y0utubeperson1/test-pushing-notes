@@ -18,7 +18,7 @@ jobs:
           node script.js
       - name: Push Results
         run:  |
-          git add .
+          git add --force ./api/someinfo.json
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
           git commit -m "Push Auto"
