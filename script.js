@@ -1,5 +1,5 @@
 const fs = require('fs');
-const myPath = "./api/someinfo.json"
+const myPath = "./api"
 
 let student = {"success": true, 'addList': []};
 if('addList' in student) {
@@ -10,6 +10,6 @@ student['addList'].push(r)
 if (!fs.existsSync(myPath)){
     fs.mkdirSync(myPath, { recursive: true });
 }
-fs.writeFileSync(myPath, JSON.stringify(student))
+fs.writeFileSync(myPath + "/someinfo.json", JSON.stringify(student))
 
 console.log(student);
